@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Assignment</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <style>
+      * {
+        margin: 0px;
+        box-sizing: 0px;
+        padding: 0px;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+      }
+
+      main {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: flex-start;
+        font-weight: bold;
+      }
+
+      .nav-bar {
+        display: flex;
+      }
+      @media (max-width: 1000px) {
+        .nav-bar {
+          display: none;
+        }
+      }
+
+      .nav-bar li {
+        margin: 60px 10px;
+      }
+
+      .nav-bar2 {
+        margin: 50px 0;
+        display: flex;
+      }
+
+      .nav-bar2 li {
+        margin: 0px 20px;
+      }
+
+      .bi-heart {
+        font-weight: bold;
+        font-size: 25px;
+      }
+
+      .bi-person {
+        font-weight: bold;
+        font-size: 25px;
+      }
+
+      select {
+        border: none;
+        border-right: 1px solid gray;
+        padding-right: 0px;
+        margin: 0 20px;
+        color: gray;
+      }
+
+      .fo {
+        border-bottom-right-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 15px;
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 160px;
+        width: 850px;
+        padding: 5px;
+        background-color: white;
+        height: 60px;
+      }
+
+      @media (max-width: 1000px) {
+        .fo {
+          width: 10px;
+          padding: 0px;
+          margin: 0px;
+          height: 50px;
+        }
+        select {
+          width: 80px;
+        }
+      }
+      option {
+        margin: 20px;
+      }
+
+      .bi-search {
+        background-color: yellow;
+        border-radius: 50px;
+        padding: 15px;
+      }
+      @media (max-width: 400px) {
+        .bi-search {
+          display: none;
+          padding: 0px;
+          margin: 0px;
+          background-color: white;
+        }
+      }
+
+      .m1 {
+        margin-left: 160px;
+        margin-top: 180px;
+      }
+      @media (max-width: 1000px) {
+        .m1 {
+          font-size: 15px;
+          align-items: flex-start;
+          margin: 0px;
+          padding: 10px;
+          margin-top: 80px;
+        }
+      }
+      .img1 {
+        position: absolute;
+        top: 350px;
+        left: 400px;
+      }
+      @media (max-width: 1000px) {
+        .img1 {
+          position: absolute;
+          top: 200px;
+          left: 250px;
+        }
+      }
+      .m12 {
+        background-image: url(images/men.jpeg);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-color: rgb(241, 241, 82);
+        background-size: 600px 700px;
+        padding: 10px;
+      }
+      @media (max-width: 1000px) {
+        .m12 {
+          background-image: none;
+        }
+      }
+
+      .abc {
+        background-color: rgb(241, 241, 82);
+        height: 155px;
+      }
+
+      .lis {
+        color: gray;
+        height: 3px;
+        width: 1px;
+      }
+
+      .card-1 {
+        width: 300px;
+        height: 340px;
+        padding: 10px;
+        text-align: left;
+        border-left: 1px solid lightgray;
+        border-top: 1px solid rgba(236, 236, 215, 0.832);
+        border-right: 1px solid rgba(236, 236, 215, 0.832);
+        border-bottom: 1px solid rgba(236, 236, 215, 0.832);
+
+        border-radius: 10px;
+      }
+      .dis {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        gap: 10px;
+      }
+      .colo {
+        color: gray;
+      }
+      h2 {
+        font-size: 45px;
+      }
+
+      .c1 {
+        border-bottom: 1px solid lightgray;
+      }
+
+      .c2-1 {
+        text-align: center;
+      }
+
+      .c2-2 {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .c2-3 {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .cards {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        padding: 10px;
+      }
+      .pa {
+        padding: 30px;
+      }
+      h5 {
+        margin-top: 25px;
+      }
+
+      @media (max-width: 1000px) {
+        .cards {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          align-items: center;
+          text-align: center;
+          gap: 60px;
+        }
+        .card-1 {
+          flex-wrap: wrap;
+        }
+      }
+
+      .te {
+        align-items: center;
+        text-align: center;
+        margin-top: -40px;
+        padding: 10px;
+        border-radius: 50%;
+        margin-left: 70px;
+      }
+
+      fieldset {
+        width: 250px;
+        background-color: white;
+      }
+
+      .bi-archive-fill {
+        background-color: yellow;
+      }
+
+      .bi-flag {
+        background-color: lightgray;
+      }
+
+      .bi-credit-card-fill {
+        background-color: lightgray;
+      }
+
+      .bi-folder {
+        background-color: lightgray;
+      }
+
+      .bu {
+        background-color: yellow;
+        border: none;
+        border-radius: 5px;
+        padding: 4px;
+        width: 110px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+
+      .dhl {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 30px;
+      }
+      @media (max-width: 1000px) {
+        .dhl {
+          flex-wrap: wrap;
+          flex-direction: row;
+          gap: 50px;
+        }
+      }
+
+      .bu1 {
+        background-color: white;
+        border: 1px solid yellow;
+        padding: 4px;
+        border-radius: 5px;
+        width: 110px;
+      }
+
+      .purnima {
+        width: 400px;
+        border-left: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+      }
+
+      .pu {
+        width: 300px;
+        margin-left: 100px;
+        margin-top: -75px;
+      }
+
+      .g {
+        color: gray;
+      }
+
+      .mcard {
+        padding: 50px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 50px;
+      }
+
+      .usa {
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+        margin-top: 60px;
+      }
+
+      .say {
+        padding: 100px;
+        gap: 50px;
+      }
+
+      .in {
+        width: 250px;
+      }
+
+      .tab {
+        display: flex;
+        justify-content: center;
+      }
+
+      @media (max-width: 1000px) {
+        .tab {
+          font-size: 10px;
+          flex-wrap: wrap;
+        }
+      }
+
+      .foot {
+        padding: 90px;
+      }
+
+      .no {
+        border-right: 1px solid black;
+        padding-right: 20px;
+      }
+
+      .bu2 {
+        background-color: rgb(228, 228, 161);
+      }
+
+      .foot {
+        background-color: yellow;
+      }
+      .line {
+        line-height: 40px;
+        font-size: 14px;
+      }
+      li:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <div class="m12">
+      <main>
+        <div class="nav">
+          <img src="/images/logo.jpeg" alt="" height="80px" width="80px" />
+          <ul class="nav-bar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Migrate</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="nav-bar2">
+          <li><a href="#" class="bi bi-heart text-white"></a></li>
+          <li><a href="#" class="bi bi-person text-white"></a></li>
+        </div>
+      </main>
+      <section class="sec-1">
+        <div class="m1">
+          <h1>
+            <p style="font-family: serif; font-size: 40px">Let your</p>
+            <p
+              style="font-weight: bolder; font-size: 40px; margin-bottom: 40px"
+            >
+              dream take
+            </p>
+          </h1>
+          <div class="img1">
+            <img
+              src="/images/wings logo.jpeg"
+              alt=""
+              width="170px"
+              height="100px"
+            />
+          </div>
+          <p style="margin-top: 50px">Find your dream college</p>
+        </div>
+
+        <div class="fo">
+          <select class="form-select-sm bo">
+            <option selected></option>
+            <option value="">a</option>
+            <option value="">b</option>
+            <option value="">c</option>
+          </select>
+          <select class="form-select-sm">
+            <option selected>Choose your degree</option>
+            <option value="">DIPLOMA</option>
+            <option value="">BE</option>
+            <option value="">ME</option>
+          </select>
+          <select class="form-select-sm">
+            <option selected>Area of study</option>
+            <option value="">Maharashtra</option>
+            <option value="">Andra Pardesh</option>
+            <option value="">Tamilnadu</option>
+          </select>
+          <select class="form-select-sm">
+            <option selected>Course or Specialization</option>
+            <option value="">Front End Devloper</option>
+            <option value="">Back End Devloper</option>
+            <option value="">Fullstack Devloper</option>
+          </select>
+          <span class="bi bi-search" style="margin-left: 100px"></span>
+        </div>
+      </section>
+    </div>
+    <div class="abc"></div>
+
+    <div class="sec-2" style="margin-top: 120px; margin-left: 50px">
+      <h2 style="margin-bottom: 60px">
+        Partnered <span style="font-weight: bold">Universiteis</span>
+      </h2>
+    </div>
+
+    <div class="cards p-4">
+      <div class="card-1">
+        <div class="c1 p-3">
+          <img
+            src="/images/f2.jpeg"
+            alt=""
+            height="16px"
+            width="30px"
+            style="margin-right: 12px"
+          />
+          <span class="colo">Peiora, lllinois</span>
+        </div>
+        <div class="c2 mt-2 p-2 card-body">
+          <div class="dis">
+            <div class="c2-1">
+              <img
+                src="/images/co logo.jpeg"
+                alt=""
+                height="60px"
+                width="60px"
+                style="border-radius: 50px"
+              />
+            </div>
+            <div>
+              <span
+                style="
+                  color: rgb(207, 25, 25);
+                  font-family: serif;
+                  font-weight: bold;
+                  font-size: 20px;
+                "
+                >University of Dayton</span
+              >
+            </div>
+          </div>
+
+          <div class="c2-2">
+            <div class="c2-2-1">
+              <div
+                style="border-right: 2px solid lightgrey; padding-right: 20px"
+              >
+                <h6 class="mt-4">Starting Fee</h6>
+                <p style="color: gray; margin-top: -7px">$12000</p>
+              </div>
+            </div>
+            <div class="c2-2-2">
+              <div
+                style="border-right: 2px solid lightgrey; padding-right: 20px"
+              >
+                <h6 class="mt-4 ms-2">IELTS</h6>
+                <p style="color: gray; margin-top: -7px" class="ms-2">6.0</p>
+              </div>
+            </div>
+            <div class="c2-2-3">
+              <h6 class="mt-4 ms-2">GRE</h6>
+              <p style="color: gray; margin-top: -7px" class="ms-2">280</p>
+            </div>
+          </div>
+          <div class="c2-3 mt-4">
+            <img
+              src="/images/s1.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="border-radius: 50px; border: 3px solid white"
+            />
+            <img
+              src="/images/s2.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="
+                border-radius: 50px;
+                margin-left: -40px;
+                border: 3px solid white;
+              "
+            />
+            <img
+              src="/images/s3.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="
+                border-radius: 50px;
+                margin-left: -40px;
+                border: 3px solid white;
+              "
+            />
+            <img
+              src="/images/w3.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="
+                border-radius: 50px;
+                margin-left: -40px;
+                border: 3px solid white;
+              "
+            />
+
+            <span
+              style="
+                color: gray;
+                font-size: 10px;
+                width: 50px;
+                margin-left: -25px;
+              "
+              >50+ Students</span
+            >
+            <div
+              style="
+                color: gray;
+                font-size: 10px;
+                margin-right: 5px;
+                width: 50px;
+              "
+            >
+              Chat with alumni
+            </div>
+            <span
+              class="bi bi-chat-left-text-fill"
+              style="font-size: 22px; margin-left: -28px"
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="card-1">
+        <div class="c1 p-3">
+          <img
+            src="/images/f1.jpeg"
+            alt=""
+            height="16px"
+            width="30px"
+            style="margin-right: 12px"
+          />
+          <span class="colo">Peiora, lllinois</span>
+        </div>
+        <div class="c2 mt-2 p-2 card-body">
+          <div class="dis">
+            <div class="c2-1">
+              <img
+                src="/images/co logo2.jpeg"
+                alt=""
+                height="30px"
+                width="30px"
+                style="border-radius: 50px"
+              />
+            </div>
+            <div>
+              <span
+                style="
+                  color: rgb(31, 49, 163);
+                  font-family: serif;
+                  font-weight: bold;
+                  font-size: 20px;
+                "
+              >
+                <span style="font-size: 14px">Univercity of </span> ILLINOIS
+                CHICAGO</span
+              >
+            </div>
+          </div>
+
+          <div class="c2-2">
+            <div class="c2-2-1">
+              <div
+                style="border-right: 2px solid lightgrey; padding-right: 20px"
+              >
+                <h6 class="mt-4">Starting Fee</h6>
+                <p style="color: gray; margin-top: -7px">$12000</p>
+              </div>
+            </div>
+            <div class="c2-2-2">
+              <div style="">
+                <h6 class="mt-4 ms-2">IELTS</h6>
+                <p style="color: gray; margin-top: -7px" class="ms-2">6.0</p>
+              </div>
+            </div>
+          </div>
+          <div class="c2-3 mt-4">
+            <img
+              src="/images/s1.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="border-radius: 50px; border: 3px solid white"
+            />
+            <img
+              src="/images/s2.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="
+                border-radius: 50px;
+                margin-left: -25px;
+                border: 3px solid white;
+              "
+            />
+            <img
+              src="/images/s3.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="
+                border-radius: 50px;
+                margin-left: -25px;
+                border: 3px solid white;
+              "
+            />
+            <img
+              src="/images/w3.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="
+                border-radius: 50px;
+                margin-left: -25px;
+                border: 3px solid white;
+              "
+            />
+
+            <span
+              style="
+                color: gray;
+                font-size: 10px;
+                width: 50px;
+                margin-left: -5px;
+              "
+              >50+ Students</span
+            >
+            <div
+              style="
+                color: gray;
+                font-size: 10px;
+                margin-right: 5px;
+                width: 80px;
+              "
+            >
+              Chat with alumni
+              <span
+                class="bi bi-chat-left-text-fill"
+                style="font-size: 15px"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-1 bg-white" style="border: none">
+        <div class="c1 p-3">
+          <img
+            src="/images/f2.jpeg"
+            alt=""
+            height="16px"
+            width="30px"
+            style="margin-right: 12px"
+          />
+          <span class="colo">Peiora, lllinois</span>
+        </div>
+        <div class="c2 mt-2 p-2 card-body">
+          <div class="dis">
+            <div class="c2-1">
+              <img
+                src="/images/co logo3.jpeg"
+                alt=""
+                height="30px"
+                width="30px"
+                style="border-radius: 50px"
+              />
+            </div>
+            <div>
+              <span
+                style="
+                  color: rgb(4, 118, 8);
+                  font-family: serif;
+                  font-weight: bold;
+                  font-size: 18px;
+                "
+                >CLEVELAND STATE UNIVERSITY</span
+              >
+            </div>
+          </div>
+
+          <div class="c2-2">
+            <div class="c2-2-1">
+              <div
+                style="border-right: 2px solid lightgrey; padding-right: 20px"
+              >
+                <h6 class="mt-4">Starting Fee</h6>
+                <p style="color: gray; margin-top: -7px">$12000</p>
+              </div>
+            </div>
+            <div class="c2-2-2">
+              <div
+                style="border-right: 2px solid lightgrey; padding-right: 20px"
+              >
+                <h6 class="mt-4 ms-2">IELTS</h6>
+                <p style="color: gray; margin-top: -7px" class="ms-2">6.0</p>
+              </div>
+            </div>
+            <div class="c2-2-3">
+              <h6 class="mt-4 ms-2">GRE</h6>
+              <p style="color: gray; margin-top: -7px" class="ms-2">280</p>
+            </div>
+          </div>
+          <div class="c2-3 mt-4">
+            <img
+              src="/images/s1.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="border-radius: 50px; border: 3px solid white"
+            />
+            <img
+              src="/images/s2.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="
+                border-radius: 50px;
+                margin-left: -25px;
+                border: 3px solid white;
+              "
+            />
+            <img
+              src="/images/s3.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="
+                border-radius: 50px;
+                margin-left: -25px;
+                border: 3px solid white;
+              "
+            />
+            <img
+              src="/images/w3.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="
+                border-radius: 50px;
+                margin-left: -25px;
+                border: 3px solid white;
+              "
+            />
+
+            <span
+              style="
+                color: gray;
+                font-size: 10px;
+                width: 50px;
+                margin-left: -5px;
+              "
+              >50+ Students</span
+            >
+            <div
+              style="
+                color: gray;
+                font-size: 10px;
+                margin-right: 5px;
+                width: 80px;
+              "
+            >
+              Chat with alumni
+              <span
+                class="bi bi-chat-left-text-fill"
+                style="font-size: 15px"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-1">
+        <div class="c1 p-3">
+          <img
+            src="/images/f1.jpeg"
+            alt=""
+            height="16px"
+            width="30px"
+            style="margin-right: 12px"
+          />
+          <span class="colo">Peiora, lllinois</span>
+        </div>
+        <div class="c2 mt-2 p-2 card-body">
+          <div class="dis">
+            <div>
+              <span
+                style="
+                  color: rgb(163, 31, 31);
+                  font-family: serif;
+                  font-weight: bold;
+                  font-size: 20px;
+                "
+              >
+                <span style="font-size: 12px; color: black"> UNIVERSITY OF</span
+                >&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SOUTH
+                CAROLINA</span
+              >
+            </div>
+          </div>
+
+          <div class="c2-2">
+            <div class="c2-2-1">
+              <div
+                style="border-right: 2px solid lightgrey; padding-right: 20px"
+              >
+                <h6 class="mt-4">Starting Fee</h6>
+                <p style="color: gray; margin-top: -7px">$12000</p>
+              </div>
+            </div>
+            <div class="c2-2-2">
+              <div
+                style="border-right: 2px solid lightgrey; padding-right: 20px"
+              >
+                <h6 class="mt-4 ms-2">IELTS</h6>
+                <p style="color: gray; margin-top: -7px" class="ms-2">6.0</p>
+              </div>
+            </div>
+            <div class="c2-2-3">
+              <h6 class="mt-4 ms-2">GRE</h6>
+              <p style="color: gray; margin-top: -7px" class="ms-2">280</p>
+            </div>
+          </div>
+          <div class="c2-3 mt-4">
+            <img
+              src="/images/s1.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="border-radius: 50px; border: 3px solid white"
+            />
+            <img
+              src="/images/s2.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="
+                border-radius: 50px;
+                margin-left: -25px;
+                border: 3px solid white;
+              "
+            />
+            <img
+              src="/images/s3.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="
+                border-radius: 50px;
+                margin-left: -25px;
+                border: 3px solid white;
+              "
+            />
+            <img
+              src="/images/w3.jpeg"
+              alt=""
+              height="25px"
+              width="25px"
+              style="
+                border-radius: 50px;
+                margin-left: -25px;
+                border: 3px solid white;
+              "
+            />
+
+            <span
+              style="
+                color: gray;
+                font-size: 10px;
+                width: 50px;
+                margin-left: -5px;
+              "
+              >50+ Students</span
+            >
+            <div
+              style="
+                color: gray;
+                font-size: 10px;
+                margin-right: 5px;
+                width: 80px;
+              "
+            >
+              Chat with alumni
+              <span
+                class="bi bi-chat-left-text-fill"
+                style="font-size: 15px"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-2" style="margin-top: 120px; margin-left: 100px">
+      <h2 style="margin-bottom: 80px">
+        Our <span style="font-weight: bold">Services</span>
+      </h2>
+    </div>
+
+    <div class="dhl p-3">
+      <fieldset class="pa" style="width: 280px; border-radius: 10px">
+        <legend
+          class="te bi bi-archive-fill w-25"
+          style="margin-top: -55px"
+        ></legend>
+        <h5 style="font-weight: bold">DHL Courier</h5>
+        <p style="color: rgb(122, 120, 127); margin-top: 20px; font-size: 15px">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos
+          distinctio saepe alias, consectetur quas placeat ipsam.
+        </p>
+        <div>
+          <button class="bu">Use Service</button>
+          <span
+            class="bi bi-chevron-compact-right"
+            style="margin-left: 80px"
+          ></span>
+        </div>
+      </fieldset>
+
+      <fieldset class="p-3" style="">
+        <legend class="te bi bi-credit-card-fill w-25"></legend>
+        <h5 style="font-weight: bold">Forex</h5>
+        <p style="color: gray; margin-top: 20px">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos
+          distinctio saepe alias, consectetur quas placeat ipsam.
+        </p>
+        <div>
+          <button class="bu1">Use Service</button>
+          <span
+            class="bi bi-chevron-compact-right"
+            style="margin-left: 80px"
+          ></span>
+        </div>
+      </fieldset>
+
+      <fieldset class="p-3" style="">
+        <legend class="te bi bi-folder w-25"></legend>
+        <h5 style="font-weight: bold">Financial Preparation</h5>
+        <p style="color: gray; margin-top: 20px">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos
+          distinctio saepe alias, consectetur quas placeat ipsam.
+        </p>
+        <div>
+          <button class="bu1">Use Service</button>
+          <span
+            class="bi bi-chevron-compact-right"
+            style="margin-left: 80px"
+          ></span>
+        </div>
+      </fieldset>
+
+      <fieldset class="p-3" style="">
+        <legend class="te bi bi-flag w-25"></legend>
+        <h5 style="font-weight: bold">Student VISA</h5>
+        <p style="color: gray; margin-top: 20px">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos
+          distinctio saepe alias, consectetur quas placeat ipsam.
+        </p>
+        <div>
+          <button class="bu1">Use Service</button>
+          <span
+            class="bi bi-chevron-compact-right"
+            style="margin-left: 80px"
+          ></span>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="sec-2" style="margin-top: 120px; margin-left: 50px">
+      <h2 style="margin-bottom: 80px">
+        Meet Our <span style="font-weight: bold">Student Ambassadors</span>
+      </h2>
+    </div>
+    <div class="mcard">
+      <div class="purnima row p-4">
+        <div class="col-1">
+          <img
+            src="/images/w1.jpeg"
+            alt=""
+            height="80px"
+            width="80px"
+            style="border-radius: 50px"
+          />
+        </div>
+        <div class="col-2 pu">
+          <h6>Purnima</h6>
+          <img src="/images/f1.jpeg" alt="" height="20px" width="20px" />
+          <span class="g ms-2">University of Dayton</span>
+          <p class="g mt-1">Peiora,lllinois</p>
+        </div>
+      </div>
+      <div class="purnima row p-4 bg-white" style="border: none">
+        <div class="col-1">
+          <img
+            src="/images/m1.jpeg"
+            alt=""
+            height="80px"
+            width="80px"
+            style="border-radius: 50px"
+          />
+        </div>
+        <div class="col-2 pu">
+          <h6>Sahib Singh</h6>
+          <img src="/images/f2.jpeg" alt="" height="20px" width="20px" />
+          <span class="g ms-2">Cleveland State University</span>
+          <p class="g mt-1">Peiora,lllinois</p>
+        </div>
+      </div>
+      <div class="purnima row p-4">
+        <div class="col-1">
+          <img
+            src="/images/m2.jpeg"
+            alt=""
+            height="80px"
+            width="80px"
+            style="border-radius: 50px"
+          />
+        </div>
+        <div class="col-2 pu">
+          <h6>Raj</h6>
+          <img src="/images/f1.jpeg" alt="" height="20px" width="20px" />
+          <span class="g ms-2">Univercity of Mississippl</span>
+          <p class="g mt-1">Peiora,lllinois</p>
+        </div>
+      </div>
+
+      <div class="purnima row p-4">
+        <div class="col-1">
+          <img
+            src="/images/m3.jpeg"
+            alt=""
+            height="80px"
+            width="80px"
+            style="border-radius: 50px"
+          />
+        </div>
+        <div class="col-2 pu">
+          <h6>Shashank</h6>
+          <img src="/images/f2.jpeg" alt="" height="20px" width="20px" />
+          <span class="g ms-2">University of North Caroli</span>
+          <p class="g mt-1">Peiora,lllinois</p>
+        </div>
+      </div>
+      <div class="purnima row p-4">
+        <div class="col-1">
+          <img
+            src="/images/w2.jpeg"
+            alt=""
+            height="80px"
+            width="80px"
+            style="border-radius: 50px"
+          />
+        </div>
+        <div class="col-2 pu">
+          <h6>Nandini</h6>
+          <img src="/images/f1.jpeg" alt="" height="20px" width="20px" />
+          <span class="g ms-2">Adelph University</span>
+          <p class="g mt-1">Peiora,lllinois</p>
+        </div>
+      </div>
+      <div class="purnima row p-4">
+        <div class="col-1">
+          <img
+            src="/images/m4.jpeg"
+            alt=""
+            height="80px"
+            width="80px"
+            style="border-radius: 50px"
+          />
+        </div>
+        <div class="col-2 pu">
+          <h6>Chakri</h6>
+          <img src="/images/f2.jpeg" alt="" height="20px" width="20px" />
+          <span class="g ms-2">University of lllinois</span>
+          <p class="g mt-1">Peiora,lllinois</p>
+        </div>
+      </div>
+
+      <div class="purnima row p-4">
+        <div class="col-1">
+          <img
+            src="/images/m5.jpeg"
+            alt=""
+            height="80px"
+            width="80px"
+            style="border-radius: 50px"
+          />
+        </div>
+        <div class="col-2 pu">
+          <h6>Suresh</h6>
+          <img src="/images/f1.jpeg" alt="" height="20px" width="20px" />
+          <span class="g ms-2">University of Dayton</span>
+          <p class="g mt-1">Peiora,lllinois</p>
+        </div>
+      </div>
+      <div class="purnima row p-4">
+        <div class="col-1">
+          <img
+            src="/images/m6.jpeg"
+            alt=""
+            height="80px"
+            width="80px"
+            style="border-radius: 50px"
+          />
+        </div>
+        <div class="col-2 pu">
+          <h6>Vignesh</h6>
+          <img src="/images/f2.jpeg" alt="" height="20px" width="20px" />
+          <span class="g ms-2">Kings College</span>
+          <p class="g mt-1">Peiora,lllinois</p>
+        </div>
+      </div>
+      <div class="purnima row p-4">
+        <div class="col-1">
+          <img
+            src="/images/m7.jpeg"
+            alt=""
+            height="80px"
+            width="80px"
+            style="border-radius: 50px"
+          />
+        </div>
+        <div class="col-2 pu">
+          <h6>Siddharth</h6>
+          <img src="/images/f1.jpeg" alt="" height="20px" width="20px" />
+          <span class="g ms-2">University of Eidinburgh</span>
+          <p class="g mt-1">Peiora,lllinois</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-2" style="margin-top: 120px; margin-left: 50px">
+      <h2 style="margin-bottom: 80px">
+        What Our <span style="font-weight: bold">Student Say</span>
+      </h2>
+    </div>
+
+    <div class="row say">
+      <div class="col p-4 bg-white">
+        <p class="g">
+          Our mission is to empower all students to apply their acquired skill
+          and knowledge,and to rely upon their personal attributes to lead
+          productive lives and to become contributing members of the global
+          community.
+        </p>
+        <div class="usa">
+          <div>
+            <img
+              src="/images/w1.jpeg"
+              alt=""
+              height="80px"
+              width="80px"
+              style="border-radius: 50px"
+            />
+          </div>
+          <div class="">
+            <h6>Purnima</h6>
+            <p class="g">Univercity of the Pacific</p>
+            <p class="g" style="margin-top: -18px">USA</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col p-4 bg-white">
+        <p class="g">
+          Our mission is to empower all students to apply their acquired skill
+          and knowledge,and to rely upon their personal attributes to lead
+          productive lives and to become contributing members of the global
+          community.
+        </p>
+        <div class="usa">
+          <div>
+            <img
+              src="/images/m2.jpeg"
+              alt=""
+              height="80px"
+              width="80px"
+              style="border-radius: 50px"
+            />
+          </div>
+          <div class="">
+            <h6>Raj</h6>
+            <p class="g">Univercity of the Pacific</p>
+            <p class="g" style="margin-top: -18px">USA</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab p-2 bg-dark">
+      <div class="input-group-text bg-dark text-white" style="border: none">
+        <p class="p-3 mt-2">Available on</p>
+        <p class="p-3 mt-2">
+          <img src="/images/playstore.jpeg" width="20px" height="20px" alt="" />
+        </p>
+        <p class="bi bi-apple p-3 mt-2"></p>
+        <input
+          type="text"
+          name=""
+          class="form-control in"
+          placeholder="Enter your mobile number"
+        />
+        <button class="btn bu2 input-group-text">Submit</button>
+        <p class="p-3 mt-2">or</p>
+        <input
+          type="text"
+          name=""
+          class="form-control in"
+          placeholder="Enter your mobile number"
+        />
+        <button class="btn bu2 input-group-text">Submit</button>
+        <p class="p-3 mt-2">to get the app link</p>
+      </div>
+    </div>
+
+    <footer>
+      <div class="row">
+        <div class="col-4 foot">
+          <div>
+            <h6 class="mb-3">Office Address</h6>
+            <p style="font-size: 14px">
+              The One Way, No 29, Tyagraj Nagar Road, near Vidyapeeta Circle,
+              Vidyapeeta Layout, Ashok Nagar, Banashankari Stage I,
+              Banashankari, Bengaluru, Karnataka 560050
+            </p>
+          </div>
+          <div class="mt-4">
+            <span class="bi bi-telephone me-3"></span
+            ><span class="no">+919003075671</span
+            ><span class="ms-2">+917854545254</span>
+          </div>
+          <div class="mt-4">
+            <span class="bi bi-envelope me-3"></span
+            ><span>info@edutrust.in</span>
+          </div>
+        </div>
+
+        <div class="col-8 foot bg-white">
+          <div class="foot-title row">
+            <div class="col">
+              <h6 class="ms-4 mb-4">Useful Links</h6>
+              <ul>
+                <li class="line">Home</li>
+                <li class="line">About Us</li>
+                <li class="line">Migrate</li>
+                <li class="line">Services</li>
+                <li class="line">Contact Us</li>
+              </ul>
+            </div>
+            <div class="col">
+              <h6 class="ms-4 mb-2">International Career Streams</h6>
+              <ul>
+                <li class="line">Health Care</li>
+                <li class="line">Engineering</li>
+                <li class="line">Medicine</li>
+                <li class="line">Maritime</li>
+                <li class="line">Business Management</li>
+                <li class="line">Finance and Accounts</li>
+                <li class="line">Hospitality</li>
+                <li class="line">Visual Media</li>
+              </ul>
+            </div>
+
+            <div class="col">
+              <h6 class="ms-4 mb-4">Study In</h6>
+              <ul>
+                <li class="line">USA</li>
+                <li class="line">UK</li>
+                <li class="line">Canada</li>
+                <li class="line">Australia</li>
+              </ul>
+            </div>
+
+            <div class="col">
+              <h6 class="mb-4">Follow us on</h6>
+              <div>
+                <span class="bi bi-facebook me-3"></span>
+                <span class="bi bi-instagram me-3"></span>
+                <span class="bi bi-twitter me-3"></span>
+                <span class="bi bi-whatsapp me-3"></span>
+                <span class="bi bi-linkedin me-3"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
